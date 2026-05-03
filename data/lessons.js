@@ -4,7 +4,7 @@ const lessons = [
     chinese: "大家好，我叫 Mika。",
     pinyin: "Dàjiā hǎo, wǒ jiào Mika.",
     english: "Hello everyone, my name is Mika.",
-    mastery: 4,
+    mastery: 5,
     audio: "audio/001.mp3"
   },
   {
@@ -12,7 +12,7 @@ const lessons = [
     chinese: "我来自菲律宾。",
     pinyin: "Wǒ láizì Fēilǜbīn.",
     english: "I am from the Philippines.",
-    mastery: 3,
+    mastery: 4,
     audio: "audio/002.mp3"
   },
   {
@@ -20,7 +20,7 @@ const lessons = [
     chinese: "我今年二十岁了。",
     pinyin: "Wǒ jīnnián èrshí suì le.",
     english: "I am twenty years old this year.",
-    mastery: 3,
+    mastery: 4,
     audio: "audio/003.mp3"
   },
   {
@@ -28,7 +28,7 @@ const lessons = [
     chinese: "早安，你睡得好吗？",
     pinyin: "Zǎo ān, nǐ shuì de hǎo ma?",
     english: "Good morning, did you sleep well?",
-    mastery: 4,
+    mastery: 5,
     audio: "audio/004.mp3"
   },
   {
@@ -36,7 +36,7 @@ const lessons = [
     chinese: "晚安，祝你好梦。",
     pinyin: "Wǎn ān, zhù nǐ hǎo mèng.",
     english: "Good night, sweet dreams.",
-    mastery: 2,
+    mastery: 4,
     audio: "audio/005.mp3"
   },
   {
@@ -52,7 +52,7 @@ const lessons = [
     chinese: "你在忙吗？",
     pinyin: "Nǐ zài máng ma?",
     english: "Are you busy?",
-    mastery: 3,
+    mastery: 4,
     audio: "audio/007.mp3"
   },
   {

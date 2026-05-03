@@ -22,6 +22,105 @@ h1 {
   line-height: 1.5;
 }
 
+.hero {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+  border-radius: 24px;
+  padding: 18px 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.7);
+  color: #8a4b08;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(6px);
+}
+
+.hero-title {
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.hero-note {
+  margin-top: 12px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.65);
+  color: #92400e;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 12px;
+}
+
+.filter-panel {
+  background: white;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.filter-options label {
+  font-size: 14px;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #007aff;
+}
+
 .lesson-card {
   position: relative;
   background: white;
@@ -29,6 +128,12 @@ h1 {
   padding: 18px;
   margin-bottom: 16px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.lesson-card.playing {
+  box-shadow: 0 0 0 1px rgba(0, 122, 255, 0.25), 0 0 24px rgba(0, 122, 255, 0.35), 0 2px 10px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
 }
 
 .lesson-number {
@@ -80,6 +185,27 @@ h1 {
   line-height: 1.5;
 }
 
+.english-wrapper {
+  margin-bottom: 14px;
+}
+
+.english-hidden,
+.english-toggle {
+  display: inline-block;
+  color: #007aff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.english-content {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
 .play-button {
   background: #007aff;
   color: white;
@@ -103,6 +229,37 @@ h1 {
     font-size: 24px;
   }
 
+  .hero {
+    padding: 16px 16px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .filter-panel {
+    padding: 12px 14px;
+  }
+
+  .filter-title {
+    font-size: 13px;
+  }
+
+  .filter-options label {
+    font-size: 13px;
+  }
+
   .lesson-card {
     padding: 16px;
   }
@@ -120,5 +277,14 @@ h1 {
     font-size: 12px;
     padding: 7px 8px;
     max-width: 135px;
+  }
+
+  .english-hidden,
+  .english-toggle {
+    font-size: 14px;
+  }
+
+  .english-content {
+    font-size: 15px;
   }
 }

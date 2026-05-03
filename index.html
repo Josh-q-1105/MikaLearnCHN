@@ -8,8 +8,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Mika Learn CHN</h1>
-    <p class="subtitle">Ready to learn? Each new character and phrase is a little victory!</p>
+    <header class="hero">
+      <div class="hero-badge">Daily Chinese Practice</div>
+      <h1 class="hero-title">Mika Learn CHN</h1>
+      <p class="hero-subtitle">Ready to learn? Each new character and phrase is a little victory!</p>
+    </header>
+
+    <div class="filter-panel">
+      <div class="filter-title">Filter by Mastery</div>
+      <div class="filter-options">
+        <label><input type="checkbox" class="mastery-filter" value="1"> Mastery 1/5</label>
+        <label><input type="checkbox" class="mastery-filter" value="2"> Mastery 2/5</label>
+        <label><input type="checkbox" class="mastery-filter" value="3"> Mastery 3/5</label>
+        <label><input type="checkbox" class="mastery-filter" value="4"> Mastery 4/5</label>
+        <label><input type="checkbox" class="mastery-filter" value="5"> Mastery 5/5</label>
+      </div>
+    </div>
 
     <div id="lesson-list"></div>
   </div>
