@@ -92,11 +92,25 @@ h1 {
   border: 1px solid #eee;
 }
 
+.filter-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
 .filter-title {
   font-size: 14px;
   font-weight: 700;
   color: #444;
-  margin-bottom: 10px;
+}
+
+.filter-count {
+  font-size: 13px;
+  color: #007aff;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .filter-options {
@@ -178,25 +192,46 @@ h1 {
   line-height: 1.5;
 }
 
-.english {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 14px;
-  line-height: 1.5;
-}
-
 .english-wrapper {
   margin-bottom: 14px;
 }
 
-.english-hidden,
-.english-toggle {
-  display: inline-block;
+.translation-toggle {
+  appearance: none;
+  border: 1px solid rgba(0, 122, 255, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
   color: #007aff;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 9px 14px;
+  border-radius: 999px;
   cursor: pointer;
-  user-select: none;
+  box-shadow: 0 1px 4px rgba(0, 122, 255, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.translation-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 122, 255, 0.12);
+}
+
+.translation-toggle.hidden {
+  display: none;
+}
+
+.translation-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.translation-panel.open {
+  max-height: 140px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 10px;
 }
 
 .english-content {
@@ -204,6 +239,17 @@ h1 {
   color: #666;
   line-height: 1.5;
   margin-bottom: 8px;
+}
+
+.translation-hide {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #007aff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
 }
 
 .play-button {
@@ -214,6 +260,16 @@ h1 {
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.play-button:hover {
+  transform: translateY(-1px);
+}
+
+.play-button.playing {
+  background: #0062cc;
+  box-shadow: 0 6px 16px rgba(0, 122, 255, 0.25);
 }
 
 .play-button:active {
@@ -256,6 +312,10 @@ h1 {
     font-size: 13px;
   }
 
+  .filter-count {
+    font-size: 12px;
+  }
+
   .filter-options label {
     font-size: 13px;
   }
@@ -279,9 +339,9 @@ h1 {
     max-width: 135px;
   }
 
-  .english-hidden,
-  .english-toggle {
-    font-size: 14px;
+  .translation-toggle,
+  .translation-hide {
+    font-size: 13px;
   }
 
   .english-content {
